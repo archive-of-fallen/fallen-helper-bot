@@ -8,13 +8,11 @@ client.on('ready', () => {
 
 let prefix = "++"
 
-client.on('guildMemberUpdate', newMem => {
-  if (newMem.displayName.startsWith("!")) {
-    newMem.setNickname(`${newMem.username.substr(2, 100)}`, `Changed ${newMem.username}#${newMem.user.tag}'s nickname for hoisting.`)
-  }
-});
-
 client.on('message', msg => {  
+  if (msg.guild.members.filter(members => members.user.username.startsWith("!"))) {
+    members.setNickname(`${newMem.username.substr(2, 100)}`, `Changed ${newMem.username}#${newMem.user.tag}'s nickname for hoisting.`)
+  }
+  
   if (msg.content.startsWith(prefix + 'ping')) {
     msg.reply('Why are you interested in checking out my response time?').then(sentMsg => {
         sentMsg.edit(`Pong! [${sentMsg.createdTimestamp - msg.createdTimestamp}ms]`)
