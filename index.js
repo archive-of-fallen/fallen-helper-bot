@@ -10,7 +10,7 @@ let prefix = "++"
 
 client.on('message', msg => {  
   if (msg.guild.members.filter(mem => mem.user.username.startsWith("!"))) {
-    msg.user.setNickname(`${msg.user.username.substr(2, 100)}`, `Changed ${msg.user.username}#${msg.user.tag}'s nickname for hoisting.`)
+    msg.author.setNickname(`${msg.author.username.substr(2, 100)}`, `Changed ${msg.author.username}#${msg.author.tag}'s nickname for hoisting.`)
   }
   
   if (msg.content.startsWith(prefix + 'ping')) {
