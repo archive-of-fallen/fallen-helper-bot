@@ -9,6 +9,8 @@ client.on('ready', () => {
 let prefix = "++"
 
 client.on('message', msg => {
+  if (msg.guild.member.nickname.startsWith("!")).then(nickname => msg.member.setNickname("No hoists please"))
+  
   if (msg.content.startsWith(prefix + 'ping')) {
     msg.reply('Why are you interested in checking out my response time?').then(sentMsg => {
         sentMsg.edit(`Pong! [${sentMsg.createdTimestamp - msg.createdTimestamp}ms]`)
