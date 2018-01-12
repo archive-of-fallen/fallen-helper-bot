@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`[${new Date().toString().substr(0, 23)}] Successfully logged in as ${client.user.tag}!`);
-  client.user.setGame("H-hey? Will you be my friend...?")
+  client.user.setGame("You do not need to know my purpose.")
 });
 
 let prefix = "++"
