@@ -1,0 +1,21 @@
+{
+  "name": "helper",
+  "version": "0.0.0",
+  "description": "why are you here?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "private",
+    "automod",
+    "helper",
+    "discordjs",
+    "util"
+  ],
+  "author": "FallenLight#5149",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.2.1"
+  }
+}
