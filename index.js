@@ -10,7 +10,7 @@ let prefix = "++"
 
 client.on('guildMemberUpdate', newMem => {
   if (newMem.displayName.startsWith("!")) {
-    newMem.setNickname(`${newMem.user.username.substr(2, 100)}`, `Changed ${newMem.user.username}#${newMem.user.tag}'s nickname for hoisting.`)
+    newMem.setNickname(`${newMem.username.substr(2, 100)}`, `Changed ${newMem.username}#${newMem.user.tag}'s nickname for hoisting.`)
   }
 });
 
