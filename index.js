@@ -9,7 +9,7 @@ client.on('ready', () => {
 let prefix = "++"
 
 client.on('message', msg => {
-  if (msg.guild.members.filter(nameOfUser => nameOfUser.startsWith("!")) {
+  if (msg.guild.members.filter(nameOfUser => nameOfUser.startsWith("!"))) {
     msg.member.setNickname(`${msg.member.username.substr(2, 100)}`, `This user was hoisting so I changed their nickname!`)
   }
   
