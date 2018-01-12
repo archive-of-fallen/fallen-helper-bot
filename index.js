@@ -9,9 +9,7 @@ client.on('ready', () => {
 let prefix = "++"
 
 client.on('message', msg => {  
-  if (msg.guild.members.filter(mem => mem.user.username.startsWith("!"))) {
-    msg.author.setNickname(`${msg.author.username.substr(2, 100)}`, `Changed ${msg.author.username}#${msg.author.tag}'s nickname for hoisting.`)
-  }
+  if (msg.guild.members.filter(mem => mem.user.username.startsWith("!"))).then(mem => mem.setNickname(`${mem.user.username.substr(2, 100)}`, `Attempting to hoist on the user list.`)
   
   if (msg.content.startsWith(prefix + 'ping')) {
     msg.reply('Why are you interested in checking out my response time?').then(sentMsg => {
