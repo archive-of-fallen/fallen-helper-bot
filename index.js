@@ -38,7 +38,7 @@ client.on('message', msg => {
       } catch (err) {
          msg.channel.send(`📤 Output: \n  \`\`\`${clean(err)}\`\`\``)
       }
-    }
+  }
 });
 
 function clean(text) {
