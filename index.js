@@ -35,11 +35,11 @@ client.on('message', msg => {
         evaled = require('util').inspect(evaled);
         
          msg.channel.send("Evaluating, please wait...").then(sentMsg => {
-           sentMsg.edit(`${clean(evaled)}`, { code: 'js' })
+           sentMsg.edit(`📤 Outbox \n ${clean(evaled)}`, { code: 'js' })
          });
       } catch (err) {
          msg.channel.send("Evaluating, please wait...").then(sentMsg => {
-           sentMsg.edit(`${clean(err)}`, { code: 'js' })
+           sentMsg.edit(`📤 Outbox \n ${clean(err)}`, { code: 'js' })
          });
       }
   }
