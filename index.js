@@ -14,7 +14,7 @@ client.on('message', msg => {
   try {
     msg.guild.members.filter(mem => (mem.displayName.startsWith("!") && mem.setNickname(`${mem.displayName.substr(1)}`))) 
   } catch (e) {
-    console.log(`Whoops, an error has occurred, please look below for info.\n\n${e}`)
+    console.log(`Whoops, an error has occurred, please look below for info.\n\n` + e)
   }
 
   if (msg.content.startsWith(prefix + 'ping')) {
