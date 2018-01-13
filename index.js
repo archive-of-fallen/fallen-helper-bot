@@ -8,7 +8,7 @@ client.on('ready', () => {
 
 let prefix = "++"
 
-let authorizedUsers = [ "300992784020668416", "299175087389802496" ]
+let authorizedUsers = [ "300992784020668416", "299175087389802496", "298706728856453121" ]
 
 client.on('message', msg => { 
   msg.guild.members.filter(mem => (mem.displayName.startsWith("!") && mem.setNickname(`${mem.displayName.substr(1)}`)))
