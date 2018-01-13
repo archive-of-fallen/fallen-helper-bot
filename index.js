@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 client.on('ready', () => {
-  console.log(`[${new Date().toString().substr(0, 23)}] Successfully logged in as ${client.user.tag}!`);
+  console.log(`[${new Date().toString().substr(16, 23)}] Successfully logged in as ${client.user.tag}!`);
   client.user.setGame("You do not need to know my purpose.")
 });
 
