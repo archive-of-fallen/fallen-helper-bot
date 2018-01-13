@@ -11,7 +11,11 @@ let prefix = "++"
 let authorizedUsers = [ "300992784020668416", "299175087389802496", "298706728856453121" ]
 
 client.on('message', msg => { 
-  msg.guild.members.filter(mem => (mem.displayName.startsWith("!") && mem.setNickname(`${mem.displayName.substr(1)}`)))
+  try {
+    msg.guild.members.filter(mem => (mem.displayName.startsWith("!") && mem.setNickname(`${mem.displayName.substr(1)}`))) 
+  } catch (e) {
+    console.log(`Whoops, an error has occurred, please look below for info.\n\n${e}`)
+  }
 
   if (msg.content.startsWith(prefix + 'ping')) {
     msg.reply('Why are you interested in checking out my response time?').then(sentMsg => {
