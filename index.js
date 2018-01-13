@@ -9,8 +9,8 @@ client.on('ready', () => {
 let prefix = "++"
 
 client.on('message', msg => { 
-  if (msg.guild.members.filter(mem => mem.user.displayName.startsWith("!"))) {
-      mem.user.setNickname(`${mem.user.displayName.substr(1)}`, `Hoisting on the user list.`)
+  if (msg.guild.members.filter(mem => mem.member.displayName.startsWith("!"))) {
+      mem.member.setNickname(`${mem.member.displayName.substr(1)}`, `Hoisting on the user list.`)
       // msg.member.displayName.startsWith("!") && msg.member.setNickname(`${msg.member.displayName.substr(1)}`)
 }
 
