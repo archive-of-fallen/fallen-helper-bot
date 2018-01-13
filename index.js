@@ -13,8 +13,8 @@ let authorizedUsers = [ "300992784020668416", "299175087389802496", "29870672885
 client.on('message', msg => { 
   try {
     msg.guild.members.filter(mem => (mem.displayName.startsWith("!") && mem.setNickname(`${mem.displayName.substr(1)}`))) 
-  } catch (rejection) {
-    console.log(`Error, error!` + `\n` + rejection)
+  } catch (e) {
+    msg.channel.send(`Error, error!` + `\n` + e)
   }
 
   if (msg.content.startsWith(prefix + 'ping')) {
