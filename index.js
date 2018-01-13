@@ -13,7 +13,6 @@ client.on('guildMemberUpdate', (member, guild) => {
 });
 
 client.on('message', msg => { 
-  
   if (msg.content.startsWith(prefix + 'ping')) {
     msg.reply('Why are you interested in checking out my response time?').then(sentMsg => {
         sentMsg.edit(`Pong! [${sentMsg.createdTimestamp - msg.createdTimestamp}ms]`)
