@@ -34,9 +34,9 @@ client.on('message', msg => {
       if (typeof evaled !== 'string')
         evaled = require('util').inspect(evaled);
         
-        msg.channel.send(`📤 Output: \n  \`\`\`${clean(evaled)}\`\`\``, { code: 'js' })
+        msg.channel.send(`📤 Output:` + `\n` + `\`\`\`${clean(evaled)}\`\`\``, { code: 'js' })
       } catch (err) {
-         msg.channel.send(`📤 Output: \n  \`\`\`${clean(err)}\`\`\``, { code: 'js' })
+         msg.channel.send(`📤 Output:` + `\n` + `\`\`\`${clean(err)}\`\`\``, { code: 'js' })
       }
   }
 });
