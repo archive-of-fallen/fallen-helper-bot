@@ -36,7 +36,7 @@ client.on('message', msg => {
         
         msg.channel.send(`📤 Output: \n  \`\`\`js${clean(evaled)}\`\`\``)
       } catch (err) {
-         msg.channel.send(`📤 Output: \n  \`\`\`${clean(err)}\`\`\``)
+         msg.channel.send(`📤 Output: \n  \`\`\`js${clean(err)}\`\`\``)
       }
   }
 });
