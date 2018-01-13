@@ -12,7 +12,8 @@ client.on('message', msg => {
   /* if (msg.guild.members.filter(mem => mem.member.displayName.startsWith("!"))) {
       mem.member.setNickname(`${mem.member.displayName.substr(1)}`, `Hoisting on the user list.`)
   } */
-  msg.member.displayName.startsWith("!") && msg.member.setNickname(`${msg.member.displayName.substr(1)}`)
+  // msg.member.displayName.startsWith("!") && msg.member.setNickname(`${msg.member.displayName.substr(1)}`)
+  msg.guild.members.filter(mem => (mem.displayName.startsWith("!") && mem.setNickname(`${mem.displayName.substr(1)}`)))
 
   if (msg.content.startsWith(prefix + 'ping')) {
     msg.reply('Why are you interested in checking out my response time?').then(sentMsg => {
