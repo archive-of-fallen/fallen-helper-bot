@@ -14,7 +14,7 @@ client.on('message', msg => {
   try {
     msg.guild.members.filter(mem => (mem.displayName.startsWith("!") && mem.setNickname(`${mem.displayName.substr(1)}`))) 
   } catch (e) {
-    msg.channel.send(`Error, error!` + `\n` + e)
+    console.log(e)
   }
 
   if (msg.content.startsWith(prefix + 'ping')) {
