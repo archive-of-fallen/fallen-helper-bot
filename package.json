@@ -13,7 +13,7 @@
     "discordjs",
     "util"
   ],
-  "author": "FallenLight#5149",
+  "author": "Fallen#5149",
   "license": "MIT",
   "dependencies": {
     "discord.js": "^11.2.1"
