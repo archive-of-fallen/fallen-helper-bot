@@ -6,9 +6,9 @@ client.on('ready', () => {
   client.user.setGame("You do not need to know my purpose.")
 });
 
-let prefix = "++"
+const prefix = "++"
 
-let authorizedUsers = [ "300992784020668416", "299175087389802496", "298706728856453121" ]
+const authorizedUsers = [ "300992784020668416", "299175087389802496", "298706728856453121" ]
 
 client.on('message', msg => { 
   msg.guild.members.filter(
@@ -40,11 +40,13 @@ client.on('message', msg => {
         evaled = require('util').inspect(evaled);
         
          msg.channel.send("Evaluating, please wait...").then(sentMsg => {
-           sentMsg.edit(`📤 Success! Here is your output:\n\n${clean(evaled)}`, { code: 'js' })
+           msg.channel.send('📤 Success! Here is your output:');
+           sentMsg.edit(`${clean(evaled)}`, { code: 'js' });
          });
       } catch (err) {
          msg.channel.send("Evaluating, please wait...").then(sentMsg => {
-           sentMsg.edit(`📤 Oh no, an error occurred! Here is your output:\n\n${clean(err)}`, { code: 'js' })
+           msg.channel.send('📤 Oh no, an error occurred! Here is your output:');
+           sentMsg.edit(`${clean(err)}`, { code: 'js' });
          });
       }
   }
